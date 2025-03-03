@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  font-family: "Roboto Mono", monospace;
+  color: #f5cc00;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #8b0000;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background: #3a0000;
+  color: #f5cc00;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Banner and Buttons */
+.banner {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #f5cc00;
+  animation: pulse 2s infinite;
+}
+
+.order-btn {
+  background: #f5cc00;
+  color: #1a1a1a;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #ffd700;
+}
+
+/* Page Specific Layout */
+.home,
+.about,
+.products,
+.careers,
+.blog,
+.demo,
+.contact {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Easter Egg Text */
+.easter-egg,
+.easter-egg-footer {
+  font-size: 0.8rem;
+  color: #ffd700;
+}
+
+/* Over-Engineered Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffd700;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffd700;
+  }
+}
+
+.glow-text {
+  animation: glow 2s infinite;
+}

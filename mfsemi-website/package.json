@@ -1,0 +1,16 @@
+{
+  "name": "mfsemi-website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "gsap": "^3.11.0",
+    "p5": "^1.6.0"
+  }
+}
