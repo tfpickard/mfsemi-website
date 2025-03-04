@@ -14,7 +14,7 @@ export default function Smooth3DObject() {
 
       p.setup = () => {
         p.createCanvas(600, 400, p.WEBGL);
-        p.noFill();
+        p.fill(150, 150, 250, 150); // Add some fill color with transparency
       };
 
       p.draw = () => {
@@ -35,7 +35,7 @@ export default function Smooth3DObject() {
         sides = 3 + Math.floor(Math.abs(Math.sin(p.frameCount * 0.01) * 10));
 
         // Draw the 3D object
-        p.beginShape();
+        p.beginShape(p.TRIANGLE_FAN); // Use TRIANGLE_FAN for smoother surfaces
         for (let i = 0; i < sides; i++) {
           const angle = p.TWO_PI / sides * i;
           const x = 100 * Math.cos(angle);
