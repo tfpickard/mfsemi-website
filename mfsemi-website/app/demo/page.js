@@ -8,8 +8,12 @@ export default function Demo() {
   const [stats, setStats] = useState({ quantum: 0, flux: 0 });
 
   // Rössler Attractor parameters
-  const a = 0.2, b = 0.2, c = 5.7;
-  let x = 0.1, y = 0, z = 0;
+  const a = 1.2,
+    b = 1.2,
+    c = 5.7;
+  let x = Math.random(),
+    y = Math.random(),
+    z = Math.random();
   const dt = 0.01;
 
   // Simulate live stats update using Rössler Attractor
@@ -25,9 +29,9 @@ export default function Demo() {
 
       setStats({
         quantum: (x * 100).toFixed(9), // Scale for display
-        flux: (y * 100).toFixed(9),    // Scale for display
+        flux: (y * 100).toFixed(9), // Scale for display
       });
-    }, 2000);
+    }, 100);
     return () => clearInterval(interval);
   }, []);
 
