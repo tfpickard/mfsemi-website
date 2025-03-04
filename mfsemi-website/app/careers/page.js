@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useCallback } from "react";
-import Particles from "react-tsparticles";
+import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { particlesConfig } from "./particles-config";
 import Head from "next/head";
