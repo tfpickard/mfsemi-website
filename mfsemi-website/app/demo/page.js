@@ -24,8 +24,8 @@ export default function Demo() {
       z += dz * dt;
 
       setStats({
-        quantum: x * 100, // Scale for display
-        flux: y * 100,    // Scale for display
+        quantum: (x * 100).toFixed(9), // Scale for display
+        flux: (y * 100).toFixed(9),    // Scale for display
       });
     }, 2000);
     return () => clearInterval(interval);
