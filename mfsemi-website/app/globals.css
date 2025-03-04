@@ -115,11 +115,10 @@ footer {
 .products,
 .careers,
 .blog,
-.demo,
-.contact {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
+.demo .stats p {
+  margin: 5px 0;
+  font-family: "Roboto Mono", monospace; /* Use a monospaced font for alignment */
+  white-space: pre; /* Preserve spaces for alignment */
 }
 
 /* Headings */
