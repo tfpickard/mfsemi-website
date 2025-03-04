@@ -47,6 +47,8 @@ header {
   text-align: center;
   z-index: 1000;
   position: relative;
+  opacity: 1; /* Ensure full visibility */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
 header .logo h1 {
