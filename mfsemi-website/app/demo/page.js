@@ -27,6 +27,13 @@ export default function Demo() {
       y += dy * dt;
       z += dz * dt;
 
+      // Check for NaN and reset if necessary
+      if (isNaN(x) || isNaN(y) || isNaN(z)) {
+        x = Math.random();
+        y = Math.random();
+        z = Math.random();
+      }
+
       setStats({
         quantum: (x * 100).toFixed(9).padStart(19, '0'), // Scale for display
         flux: (y * 100).toFixed(9).padStart(19, '0'), // Scale for display
