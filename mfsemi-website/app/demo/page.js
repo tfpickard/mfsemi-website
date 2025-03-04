@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import Layout from "../components/Layout";
+//import Layout from "../components/Layout";
 import LorenzAttractor from "../components/LorenzAttractor";
 
 import Layout from "../components/Layout";
