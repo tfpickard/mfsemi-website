@@ -1,33 +1,57 @@
+// pages/chromata.js
 "use client";
-
-import React from "react";
+import { useEffect } from "react";
 import Head from "next/head";
-import { useEffect, useRef } from "react";
 import styles from "./chromata.module.css";
 
+//const ChromataPage = () => {
 export default function Home() {
-  console.log("hi!");
   useEffect(() => {
-    console.log("hi2!");
     const script = document.createElement("script");
-    script.src = "/chromata.min.js";
-    script.type = "text/javascript";
+    script.src = "/chromata.min.js"; // Update with the correct path to Chromata script
     script.onload = () => {
-      console.log("hi3!");
-      const image = document.querySelector("img");
+      const image = document.querySelector("#image");
+      var optoins = {
+        colorMode: "color",
+        compositeOperation: "lighten",
+        iterationLimit: 0,
+        key: "low",
+        lineWidth: 2,
+        lineMode: "smooth",
+        origin: ["bottom"],
+        outputSize: "original",
+        pathFinderCount: 30,
+        speed: 7,
+        turningAngle: Math.PI,
+      };
+
       const chromata = new Chromata(image, {
-        pathFinderCount: 50,
-        speed: 5,
+        pathFinderCount: 15,
+        speed: 9,
+        turningAngle: Math.PI / 2,
+        colorMode: "color",
+        lineWidth: 2,
+        lineMode: "square",
+        compositeOperation: "lighten",
+        origin: ["50% 50%"],
+        outputSize: "original",
+        key: "low",
+        backgroundColor: "hsla(34, 70%, 70%, 0)",
+      });
+      chromata.start();
+
+      document.querySelector("#toggle").addEventListener("click", () => {
+        const count = chromata.toggle();
+        console.log("iterations: " + count);
       });
 
-      //chromata.start();
-      document.body.addEventListener("click", () => {
-        console.log("hi4!");
-        chromata.toggle();
+      document.querySelector("#reset").addEventListener("click", () => {
+        chromata.reset();
       });
     };
     document.body.appendChild(script);
   }, []);
+
   return (
     <>
       <Head>
@@ -37,12 +61,13 @@ export default function Home() {
           content="Leading the future of electronics design."
         />
       </Head>
-
       <section className="home">
         <h1 className="glow-text">Welcome to MFSemi LLC</h1>
         <p>Leading the future of electronics design and innovation.</p>
-        <div className={styles.container}>
-          <img src="/mfsemi_logo_2.png" alt="NYC" />
+        <div className="container">
+          <img id="image" src="/logo.png" alt="Chromata Artwork" />
+          <button id="toggle">Toggle</button>
+          <button id="reset">Reset</button>
         </div>
         <div className="banner">
           <h2>Powering the Future</h2>
@@ -52,3 +77,5 @@ export default function Home() {
     </>
   );
 }
+
+//export default ChromataPage;

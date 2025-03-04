@@ -32,7 +32,7 @@ export default function Careers() {
     () => ({
       background: {
         color: {
-          value: "rgba(0, 119, 180, 0.5)",
+          value: "rgba(11, 119, 180, 0.1)",
         },
       },
       fpsLimit: 120,
@@ -113,12 +113,12 @@ export default function Careers() {
         <title>Careers at MFSemi LLC</title>
         <meta name="description" content="Join our team at MFSemi LLC." />
       </Head>
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
       <section className="careers">
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
         <h1>Careers</h1>
         <h2>Current Openings</h2>
         <div className="job-listings">
