@@ -28,8 +28,8 @@ export default function Demo() {
       z += dz * dt;
 
       setStats({
-        quantum: (x * 100).toFixed(9), // Scale for display
-        flux: (y * 100).toFixed(9), // Scale for display
+        quantum: (x * 100).toFixed(9).padStart(19, '0'), // Scale for display
+        flux: (y * 100).toFixed(9).padStart(19, '0'), // Scale for display
       });
     }, 100);
     return () => clearInterval(interval);
