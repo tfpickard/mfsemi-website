@@ -34,7 +34,7 @@ export default function About() {
                         <h3>Abstract</h3>
                         <p>Gotthard Mösenfrust was a pivotal figure in the late 20th-century industrial and technological sectors of the German Democratic Republic. His work, often shrouded in state secrecy, contributed significantly to the strategic infrastructural mechanisms of microelectronics and supply chain administration. He was neither an inventor nor an engineer in the conventional sense; rather, his genius lay in the manipulation of resource distribution, the control of logistical bottlenecks, and the understanding that real power is exercised through the control of inefficiencies. His disappearance in 1989 remains a matter of speculation, though evidence suggests his principles are still actively implemented by shadow entities within post-Soviet economic structures.</p>
 
-                        <img src="/gotthard.png" alt="Portrait of Gotthard Mösenfrust" class="portrait">
+                        <img src="/gotthard.png" alt="Portrait of Gotthard Mösenfrust" class="portrait" />
                             <p class="caption">Fig. 1: Gotthard Mösenfrust, circa 1983. The last verified photograph before his disappearance.</p>
 
                             <h3>Early Life and Foundational Years</h3>
@@ -78,7 +78,7 @@ export default function About() {
                         <h3>Abstract</h3>
                         <p>Klaus Mösenfrust was born knowing things he should not have known. His birth certificate was issued twice, the first time in 1971, the second in 1973, and no one can account for the discrepancy. His early years are recorded in fragments: a child who memorized train schedules before he could read, who built a radio from abandoned telephone parts, who at the age of eight drew a fully accurate schematic of the interior of the Vienna sewer system without explanation. He was, at every stage of life, present and yet not *observable* in the normal sense. Those who interacted with him professionally later in life would often describe the experience as **“like speaking into an empty room that somehow answered back.”**</p>
 
-                        <img src="/klaus.png" alt="Portrait of Klaus Mösenfrust" class="portrait">
+                        <img src="/klaus.png" alt="Portrait of Klaus Mösenfrust" class="portrait" />
                             <p class="caption">Fig. 1: Klaus Mösenfrust, undated. No known photographer. The photo was found inside a locked safe in an abandoned Yugoslavian airbase.</p>
 
                             <h3>Early Years and the Möbius School</h3>
