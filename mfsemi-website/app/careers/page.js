@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Particles from "react-particles-js";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import { particlesConfig } from "./particles-config";
 import Head from "next/head";
 
@@ -17,9 +19,18 @@ export default function Careers() {
     alert("Application submitted!");
   };
 
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
   return (
     <>
-      <Particles params={particlesConfig} className="particles-background" />
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={particlesConfig}
+        className="particles-background"
+      />
       <Head>
         <title>Careers at MFSemi LLC</title>
         <meta name="description" content="Join our team at MFSemi LLC." />
