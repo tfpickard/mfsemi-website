@@ -46,9 +46,10 @@ header {
   padding: 20px;
   text-align: center;
   z-index: 1000;
-  position: relative;
-  opacity: 1; /* Ensure full visibility */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  /*position: relative;*/
+  opacity: 0.9;
+  animation: pulse 9.87654s infinite;
+  /*transition: opacity 0.3s ease-in-out; */
 }
 
 header .logo h1 {
