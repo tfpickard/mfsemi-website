@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 export default function Home() {
   return (
+    <>
       <Head>
         <title>MFSemi LLC - Home</title>
         <meta
@@ -17,6 +18,6 @@ export default function Home() {
           <button className="order-btn">Pre-Order Now</button>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }
