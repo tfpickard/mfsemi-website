@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import Layout from "../components/Layout";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });

@@ -2,10 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-//import Layout from "../components/Layout";
 import LorenzAttractor from "../components/LorenzAttractor";
-
-import Layout from "../components/Layout";
 
 export default function Demo() {
   const [stats, setStats] = useState({ quantum: 0, flux: 0 });
