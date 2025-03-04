@@ -63,6 +63,5 @@ export default function Contact() {
           <p>Telefon: +7 495 123 4567</p>
         </div>
       </section>
-    </Layout>
   );
 }
