@@ -15,8 +15,9 @@ export default function Smooth3DObject() {
 
       p.setup = () => {
         p.createCanvas(600, 400, p.WEBGL);
-        p.fill(150, 150, 250, 150); // Add some fill color with transparency
-        p.noStroke(); // Remove stroke for a smooth surface
+        p.fill(150, 150, 250, 150);
+        p.noStroke();
+        p.lights(); // Add lighting for shadows and shading
       };
 
       p.draw = () => {
@@ -43,7 +44,7 @@ export default function Smooth3DObject() {
         sides = 3 + Math.floor(Math.abs(Math.sin(p.frameCount * 0.01) * 10));
 
         // Draw a smooth 3D object
-        p.sphere(100, sides, sides); // Use sphere with dynamic detail
+        p.sphere(100, sides * 2, sides * 2); // Increase detail for smoother surface
       };
     };
 
