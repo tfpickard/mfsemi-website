@@ -8,9 +8,12 @@ export default function LorenzAttractor() {
 
   useEffect(() => {
     const sketch = (p) => {
-      let x = Math.random(), // 0.01,
+      let x = Math.random(),
         y = Math.random(),
         z = Math.random();
+      let x2 = Math.random() + 5, // Offset the second attractor
+        y2 = Math.random() + 5,
+        z2 = Math.random() + 5;
       const a = 10 * scale,
         b = 28 * scale,
         c = (8 / 3) * scale;
@@ -20,18 +23,38 @@ export default function LorenzAttractor() {
       p.setup = () => {
         p.createCanvas(600, 400, p.WEBGL);
         p.background(0);
+        // Draw the second attractor
+        p.stroke(0, 0, 255); // Blue color for the second attractor
+        p.beginShape();
+        points.forEach((pt) => {
+          p.vertex(pt.x + x2, pt.y + y2, pt.z + z2); // Offset by x2, y2, z2
+        });
+        p.endShape();
       };
 
       p.draw = () => {
         p.background(0, 25); // Creates a trailing effect
-        // Lorenz attractor differential equations
+        // Main Lorenz attractor differential equations
         const dx = a * (y - x) * dt;
         const dy = (x * (b - z) - y) * dt;
         const dz = (x * y - c * z) * dt;
         x += dx;
         y += dy;
         z += dz;
+        // Second Lorenz attractor differential equations
+        const dx2 = a * (y2 - x2) * dt;
+        const dy2 = (x2 * (b - z2) - y2) * dt;
+        const dz2 = (x2 * y2 - c * z2) * dt;
+        x2 += dx2;
+        y2 += dy2;
+        z2 += dz2;
+
         x *= pscale;
+        y *= pscale;
+        z *= pscale;
+        x2 *= pscale;
+        y2 *= pscale;
+        z2 *= pscale;
         y *= pscale;
         z *= pscale;
         points.push({ x, y, z });
@@ -42,7 +65,8 @@ export default function LorenzAttractor() {
         p.rotateY(y * 0.1);
         p.rotateX(x * 0.1);
         p.rotateZ(z * 0.1);
-        p.stroke(255);
+        // Draw the main attractor
+        p.stroke(255, 0, 0); // Red color for the main attractor
         p.noFill();
         p.beginShape();
         points.forEach((pt) => {
