@@ -16,6 +16,7 @@ export default function Careers() {
   };
 
   return (
+    <>
       <Head>
         <title>Careers at MFSemi LLC</title>
         <meta name="description" content="Join our team at MFSemi LLC." />
@@ -79,6 +80,6 @@ export default function Careers() {
           <button type="submit">Submit Application</button>
         </form>
       </section>
-    </Layout>
+    </>
   );
 }
