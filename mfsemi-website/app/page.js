@@ -8,28 +8,15 @@ export default function Home() {
   const canvasRef = useRef();
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "/chromata.min.js"; // Update with the correct path
-    script.onload = () => {
-      const img = document.createElement("img");
-      img.src = "/mfsemi_logo_2.png";
-      img.className = "my-image";
-      img.style.display = "none"; // Hide the image element itself
-      canvasRef.current.appendChild(img);
+    const img = document.createElement("img");
+    img.src = "/mfsemi_logo_2.png";
+    img.className = "my-image";
+    img.style.display = "none"; // Hide the image element itself
+    canvasRef.current.appendChild(img);
 
-      var defaults = {
-        colorMode: "color",
-        compositeOperation: "lighten",
-        iterationLimit: 0,
-        key: "low",
-        lineWidth: 2,
-        lineMode: "smooth",
-        origin: ["bottom"],
-        outputSize: "original",
-        pathFinderCount: 30,
-        speed: 7,
-        turningAngle: Math.PI,
-      };
+    const script = document.createElement("script");
+    script.src = "/chromata.min.js"; // Ensure the correct path
+    script.onload = () => {
       const chromata = new Chromata(img, {
         pathFinderCount: 50,
         speed: 5,
