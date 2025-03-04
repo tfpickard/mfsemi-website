@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Particles from "react-particles-js";
+import { particlesConfig } from "./particles-config";
 import Head from "next/head";
 
 export default function Careers() {
@@ -17,6 +19,7 @@ export default function Careers() {
 
   return (
     <>
+      <Particles params={particlesConfig} className="particles-background" />
       <Head>
         <title>Careers at MFSemi LLC</title>
         <meta name="description" content="Join our team at MFSemi LLC." />
