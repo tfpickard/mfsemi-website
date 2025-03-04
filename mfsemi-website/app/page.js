@@ -22,18 +22,18 @@ export default function Home() {
     script.src = "/chromata.min.js"; // Ensure the correct path
     script.onload = () => {
       const img = new Image();
-    img.src = "/mfsemi_logo_2.png";
-    img.onload = () => {
-      const chromataInstance = new Chromata(img, {
-        container: canvasRef.current,
-        pathGap: 2,
-        pathLength: 0.5,
-        pathColor: "#8b0000",
-        delay: 0,
-        duration: 5000,
-      });
-      chromataInstance.start();
-    };
+      img.src = "/mfsemi_logo_2.png";
+      img.onload = () => {
+        const chromataInstance = new Chromata(img, {
+          container: canvasRef.current,
+          pathGap: 2,
+          pathLength: 0.5,
+          pathColor: "#8b0000",
+          delay: 0,
+          duration: 5000,
+        });
+        chromataInstance.start();
+      };
       canvasRef.current.appendChild(img);
     };
     document.body.appendChild(script);
