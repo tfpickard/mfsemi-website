@@ -7,12 +7,25 @@ import LorenzAttractor from "../components/LorenzAttractor";
 export default function Demo() {
   const [stats, setStats] = useState({ quantum: 0, flux: 0 });
 
-  // Simulate live stats update every 2 seconds
+  // Rössler Attractor parameters
+  const a = 0.2, b = 0.2, c = 5.7;
+  let x = 0.1, y = 0, z = 0;
+  const dt = 0.01;
+
+  // Simulate live stats update using Rössler Attractor
   useEffect(() => {
     const interval = setInterval(() => {
+      // Rössler Attractor equations
+      const dx = -y - z;
+      const dy = x + a * y;
+      const dz = b + z * (x - c);
+      x += dx * dt;
+      y += dy * dt;
+      z += dz * dt;
+
       setStats({
-        quantum: Math.floor(Math.random() * 1000),
-        flux: Math.floor(Math.random() * 500),
+        quantum: x * 100, // Scale for display
+        flux: y * 100,    // Scale for display
       });
     }, 2000);
     return () => clearInterval(interval);
