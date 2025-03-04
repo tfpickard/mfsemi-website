@@ -15,11 +15,11 @@ export default function Contact() {
 
   return (
       <Head>
-        <title>Contact MFSemi LLC</title>
-        <meta name="description" content="Get in touch with MFSemi LLC." />
+        <title>Kontakt MFSemi LLC</title>
+        <meta name="description" content="Kontaktieren Sie MFSemi LLC." />
       </Head>
       <section className="contact">
-        <h1>Contact Us</h1>
+        <h1>Kontaktieren Sie uns</h1>
         <form onSubmit={handleSubmit}>
           <label>
             Name:
@@ -33,7 +33,7 @@ export default function Contact() {
           </label>
           <br />
           <label>
-            Email:
+            E-Mail:
             <input
               type="email"
               name="email"
@@ -44,7 +44,7 @@ export default function Contact() {
           </label>
           <br />
           <label>
-            Message:
+            Nachricht:
             <textarea
               name="message"
               value={form.message}
@@ -53,14 +53,14 @@ export default function Contact() {
             ></textarea>
           </label>
           <br />
-          <button type="submit">Send Message</button>
+          <button type="submit">Nachricht senden</button>
         </form>
         <div className="company-info">
           <h2>MFSemi LLC</h2>
-          <p>1234 Semiconductor Ave</p>
-          <p>Moscow, RU</p>
-          <p>Email: info@mfsemi.com</p>
-          <p>Phone: +7 495 123 4567</p>
+          <p>1234 Halbleiter Allee</p>
+          <p>Moskau, RU</p>
+          <p>E-Mail: info@mfsemi.com</p>
+          <p>Telefon: +7 495 123 4567</p>
         </div>
       </section>
     </Layout>
