@@ -41,6 +41,6 @@ export default function Blog() {
           </article>
         ))}
       </section>
-    </Layout>
+    </>
   );
 }
