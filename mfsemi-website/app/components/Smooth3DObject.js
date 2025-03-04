@@ -15,8 +15,8 @@ export default function Smooth3DObject() {
 
       p.setup = () => {
         p.createCanvas(600, 400, p.WEBGL);
-        p.noFill();
-        p.stroke(150, 150, 250); // Add some stroke color
+        p.fill(150, 150, 250, 150); // Add some fill color with transparency
+        p.noStroke(); // Remove stroke for a smooth surface
       };
 
       p.draw = () => {
@@ -42,19 +42,8 @@ export default function Smooth3DObject() {
         sides = 3 + Math.floor(Math.abs(Math.sin(p.frameCount * 0.01) * 10));
         sides = 3 + Math.floor(Math.abs(Math.sin(p.frameCount * 0.01) * 10));
 
-        // Draw the 3D object with dynamic vertices
-        p.beginShape();
-        for (let i = 0; i < sides; i++) {
-          for (let j = 0; j < sides; j++) {
-            const angle1 = p.TWO_PI / sides * i;
-            const angle2 = p.TWO_PI / sides * j;
-            const x = 100 * Math.cos(angle1) * Math.sin(angle2);
-            const y = 100 * Math.sin(angle1) * Math.sin(angle2);
-            const z = 100 * Math.cos(angle2);
-            p.vertex(x, y, z);
-          }
-        }
-        p.endShape(p.CLOSE);
+        // Draw a smooth 3D object
+        p.sphere(100, sides, sides); // Use sphere with dynamic detail
       };
     };
 
