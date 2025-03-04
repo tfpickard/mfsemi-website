@@ -1,25 +1,23 @@
 import React from "react";
 import Head from "next/head";
 import { useEffect, useRef } from "react";
-import chromata from "chromata";
 
 export default function Home() {
   const canvasRef = useRef();
 
   useEffect(() => {
-    const img = new Image();
-    img.src = "/mfsemi_logo_2.png";
-    img.onload = () => {
-      const chromataInstance = chromata(img, {
-        container: canvasRef.current,
-        pathGap: 2,
-        pathLength: 0.5,
-        pathColor: "#8b0000",
-        delay: 0,
-        duration: 5000,
-      });
+    const script = document.createElement("script");
+    script.src = "/path/to/chromata.min.js"; // Update with the correct path
+    script.onload = () => {
+      const img = document.createElement("img");
+      img.src = "/mfsemi_logo_2.png";
+      img.className = "my-image";
+      canvasRef.current.appendChild(img);
+
+      const chromataInstance = new Chromata(img);
       chromataInstance.start();
     };
+    document.body.appendChild(script);
   }, []);
   return (
     <>
