@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 export default function Products() {
   return (
+    <>
       <Head>
         <title>MFSemi LLC - Products</title>
         <meta name="description" content="Explore our cutting-edge products." />
@@ -35,6 +36,6 @@ export default function Products() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }
