@@ -8,6 +8,16 @@ export default function Home() {
   const canvasRef = useRef();
 
   useEffect(() => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 500;
+    canvas.height = 500;
+    canvasRef.current.appendChild(canvas);
+
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(50, 50, 100, 100); // Draw a blue rectangle
+
+    // Original Chromata setup
     const img = document.createElement("img");
     img.src = "/mfsemi_logo_2.png";
     img.className = "my-image";
