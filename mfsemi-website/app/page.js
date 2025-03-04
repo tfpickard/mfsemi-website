@@ -14,7 +14,7 @@ export default function Home() {
       const img = document.createElement("img");
       img.src = "/mfsemi_logo_2.png";
       img.className = "my-image";
-      img.style.display = "none"; // Hide the image element itself
+      img.style.display = "block"; // Ensure the image is visible
       canvasRef.current.appendChild(img);
 
       var defaults = {
@@ -32,9 +32,6 @@ export default function Home() {
       };
       const chromataInstance = new Chromata(img, {
         ...defaults,
-        onComplete: () => {
-          img.style.display = "block"; // Ensure the image is displayed after animation
-        },
       });
 
       chromataInstance.start();
