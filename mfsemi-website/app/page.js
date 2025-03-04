@@ -30,14 +30,15 @@ export default function Home() {
         speed: 7,
         turningAngle: Math.PI,
       };
-      const chromataInstance = new Chromata(img, {
-        ...defaults,
-        onComplete: () => {
-          img.style.display = "block"; // Ensure the image is displayed after animation
-        },
+      const chromata = new Chromata(img, {
+        pathFinderCount: 50,
+        speed: 5,
       });
+      chromata.start();
 
-      chromataInstance.start();
+      document.body.addEventListener("click", function () {
+        chromata.toggle();
+      });
     };
     document.body.appendChild(script);
   }, []);
