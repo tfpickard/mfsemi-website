@@ -19,6 +19,7 @@ export default function Demo() {
   }, []);
 
   return (
+    <>
       <Head>
         <title>Live Demo - MFSemi LLC Flagship Product</title>
         <meta
@@ -36,6 +37,6 @@ export default function Demo() {
           <LorenzAttractor />
         </div>
       </section>
-    </Layout>
+    </>
   );
 }
