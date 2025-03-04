@@ -105,7 +105,7 @@ export default function About() {
                                         "The machine is running backward now. We must go where the mind has not yet followed."
                                     </blockquote>
 
-                                    <p>It is unclear whether this was a technical statement or something else entirely. But now, with the imminent release of **the next great leap**, there is no doubt: the world is about to change.</p>
+                                    <p>It is unclear whether this was a technical statement or something else entirely. But now, with the imminent release of <strong>the next great leap</strong>, there is no doubt: the world is about to change.</p>
                                 </div>
                             </article>
                         </section>
