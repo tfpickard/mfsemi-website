@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useCallback } from "react";
-import { tsParticles } from "@tsparticles/engine";
+import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { particlesConfig } from "./particles-config";
 import Head from "next/head";
@@ -19,8 +19,8 @@ export default function Careers() {
     alert("Application submitted!");
   };
 
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
+  const particlesInit = useCallback((engine) => {
+    loadFull(engine);
   }, []);
 
   return (
