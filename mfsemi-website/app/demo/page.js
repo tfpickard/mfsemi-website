@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
+import Smooth3DObject from "../components/Smooth3DObject";
 import LorenzAttractor from "../components/LorenzAttractor";
 
 export default function Demo() {
@@ -58,6 +59,9 @@ export default function Demo() {
           <p className="flux-stats">Flux Entropy: {stats.quantum}</p>
           <p className="flux-stats">Flux Intensity: {stats.flux}</p>
           <p className="flux-stats">Metric: {stats.metric}</p>
+        </div>
+        <div className="attractor">
+          <Smooth3DObject />
         </div>
         <div className="attractor">
           <LorenzAttractor />
