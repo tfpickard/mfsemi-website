@@ -32,7 +32,7 @@ export default function Careers() {
     () => ({
       background: {
         color: {
-          value: rgba(0, 0x77, 0xb4, 0.5),
+          value: "rgba(0, 119, 180, 0.5)",
         },
       },
       fpsLimit: 120,
