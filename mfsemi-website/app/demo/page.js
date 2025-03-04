@@ -5,7 +5,7 @@ import Head from "next/head";
 import LorenzAttractor from "../components/LorenzAttractor";
 
 export default function Demo() {
-  const [stats, setStats] = useState({ quantum: 0, flux: 0 });
+  const [stats, setStats] = useState({ quantum: 0, flux: 0, metric: 0 });
 
   // Rössler Attractor parameters
   const a = 1.2,
@@ -35,8 +35,9 @@ export default function Demo() {
       }
 
       setStats({
-        quantum: (x * 100).toFixed(9).padStart(19, '0'), // Scale for display
-        flux: (y * 100).toFixed(9).padStart(19, '0'), // Scale for display
+        quantum: (Math.abs(x) * 100).toFixed(6).padStart(19, "0"), // Scale for display
+        flux: (Math.abs(y) * 100).toFixed(6).padStart(19, "0"), // Scale for display
+        metric: (Math.abs(z) * 100).toFixed(6).padStart(19, "0"), // Scale for display
       });
     }, 100);
     return () => clearInterval(interval);
@@ -54,8 +55,9 @@ export default function Demo() {
       <section className="demo">
         <h1>Flagship Product Live Demo</h1>
         <div className="stats">
-          <p>Quantum Output: {stats.quantum}</p>
-          <p>Flux Level: {stats.flux}</p>
+          <p>Flux Entropy: {stats.quantum}</p>
+          <p>Flux Intensity: {stats.flux}</p>
+          <p>Metric: {stats.metric}</p>
         </div>
         <div className="attractor">
           <LorenzAttractor />
