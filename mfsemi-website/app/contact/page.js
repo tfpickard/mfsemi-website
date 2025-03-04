@@ -14,6 +14,7 @@ export default function Contact() {
   };
 
   return (
+    <>
       <Head>
         <title>Kontakt MFSemi LLC</title>
         <meta name="description" content="Kontaktieren Sie MFSemi LLC." />
@@ -63,5 +64,6 @@ export default function Contact() {
           <p>Telefon: +7 495 123 4567</p>
         </div>
       </section>
+    </>
   );
 }
