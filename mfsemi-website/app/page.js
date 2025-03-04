@@ -18,26 +18,20 @@ export default function Home() {
     ctx.fillRect(50, 50, 100, 100); // Draw a blue rectangle
 
     // Original Chromata setup
-    const img = document.createElement("img");
+    const img = new Image();
     img.src = "/mfsemi_logo_2.png";
-    img.className = "my-image";
-    img.style.display = "none"; // Hide the image element itself
-    canvasRef.current.appendChild(img);
-
-    const script = document.createElement("script");
-    script.src = "/chromata.min.js"; // Ensure the correct path
-    script.onload = () => {
-      const chromata = new Chromata(img, {
-        pathFinderCount: 50,
-        speed: 5,
+    img.onload = () => {
+      const chromataInstance = new Chromata(img, {
+        container: canvasRef.current,
+        pathGap: 2,
+        pathLength: 0.5,
+        pathColor: "#8b0000",
+        delay: 0,
+        duration: 5000,
       });
-      chromata.start();
-
-      document.body.addEventListener("click", function () {
-        chromata.toggle();
-      });
+      chromataInstance.start();
     };
-    document.body.appendChild(script);
+    canvasRef.current.appendChild(img);
   }, []);
   return (
     <>
