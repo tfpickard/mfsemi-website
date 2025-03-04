@@ -45,6 +45,8 @@ header {
   background: #8b0000;
   padding: 20px;
   text-align: center;
+  z-index: 1000;
+  position: relative;
 }
 
 header .logo h1 {
