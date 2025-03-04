@@ -26,6 +26,7 @@ body {
   color: var(--foreground);
   /*background-color: #1a1a1a;*/
   font-family: "Roboto Mono", monospace;
+  text-align: left; /* Align text to the right for better vertical alignment */
   /*color: #f5cc00;*/
 }
 

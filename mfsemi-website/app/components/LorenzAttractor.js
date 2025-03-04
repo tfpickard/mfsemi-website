@@ -11,9 +11,9 @@ export default function LorenzAttractor() {
       let x = Math.random(),
         y = Math.random(),
         z = Math.random();
-      let x2 = Math.random() + 5, // Offset the second attractor
-        y2 = Math.random() + 5,
-        z2 = Math.random() + 5;
+      let x2 = Math.random() + 5 + (0.5 - Math.random()) * 100, // Offset the second attractor
+        y2 = Math.random() + 5 + (0.5 - Math.random()) * 100, // Offset the second attractor,
+        z2 = Math.random() + 5 + (0.5 - Math.random()) * 100; // Offset the second attractor;
       const a = 10 * scale,
         b = 28 * scale,
         c = (8 / 3) * scale;

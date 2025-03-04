@@ -1,11 +1,18 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 
 export default function Layout({ children }) {
   useEffect(() => {
-    // Animate header and navigation items
-    gsap.from(".header", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
+    // Animate header: explicitly animate from opacity 0 to opacity 1 and from y -50 to y 0.
+    gsap.fromTo(
+      ".header",
+      { opacity: 0, y: -50 },
+      { duration: 1, opacity: 1, y: 0, ease: "bounce" },
+    );
+
     gsap.from(".nav li", {
       duration: 1,
       delay: 0.5,
@@ -13,6 +20,7 @@ export default function Layout({ children }) {
       opacity: 0,
       stagger: 0.2,
     });
+
     // Animate buttons on hover
     gsap.utils.toArray("button").forEach((btn) => {
       btn.addEventListener("mouseenter", () => {
@@ -37,39 +45,25 @@ export default function Layout({ children }) {
         <nav className="nav">
           <ul>
             <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/products">
-                <a>Products</a>
-              </Link>
+              <Link href="/products">Products</Link>
             </li>
             <li>
-              <Link href="/careers">
-                <a>Careers</a>
-              </Link>
+              <Link href="/careers">Careers</Link>
             </li>
             <li>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
+              <Link href="/blog">Blog</Link>
             </li>
             <li>
-              <Link href="/demo">
-                <a>Live Demo</a>
-              </Link>
+              <Link href="/demo">Live Demo</Link>
             </li>
             <li>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
