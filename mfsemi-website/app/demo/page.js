@@ -55,9 +55,9 @@ export default function Demo() {
       <section className="demo">
         <h1>Flagship Product Live Demo</h1>
         <div className="stats">
-          <p>Flux Entropy: {stats.quantum}</p>
-          <p>Flux Intensity: {stats.flux}</p>
-          <p>Metric: {stats.metric}</p>
+          <p className="flux-stats">Flux Entropy: {stats.quantum}</p>
+          <p className="flux-stats">Flux Intensity: {stats.flux}</p>
+          <p className="flux-stats">Metric: {stats.metric}</p>
         </div>
         <div className="attractor">
           <LorenzAttractor />
