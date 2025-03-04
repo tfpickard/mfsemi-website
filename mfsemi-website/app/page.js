@@ -18,7 +18,10 @@ export default function Home() {
     ctx.fillRect(50, 50, 100, 100); // Draw a blue rectangle
 
     // Original Chromata setup
-    const img = new Image();
+    const script = document.createElement("script");
+    script.src = "/chromata.min.js"; // Ensure the correct path
+    script.onload = () => {
+      const img = new Image();
     img.src = "/mfsemi_logo_2.png";
     img.onload = () => {
       const chromataInstance = new Chromata(img, {
@@ -31,7 +34,9 @@ export default function Home() {
       });
       chromataInstance.start();
     };
-    canvasRef.current.appendChild(img);
+      canvasRef.current.appendChild(img);
+    };
+    document.body.appendChild(script);
   }, []);
   return (
     <>
