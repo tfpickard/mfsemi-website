@@ -19,7 +19,6 @@ export default function Demo() {
   }, []);
 
   return (
-    <Layout>
       <Head>
         <title>Live Demo - MFSemi LLC Flagship Product</title>
         <meta

@@ -14,7 +14,6 @@ export default function Contact() {
   };
 
   return (
-    <Layout>
       <Head>
         <title>Contact MFSemi LLC</title>
         <meta name="description" content="Get in touch with MFSemi LLC." />

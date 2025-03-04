@@ -16,7 +16,6 @@ export default function Careers() {
   };
 
   return (
-    <Layout>
       <Head>
         <title>Careers at MFSemi LLC</title>
         <meta name="description" content="Join our team at MFSemi LLC." />
