@@ -23,6 +23,7 @@ export default function Blog() {
   ];
 
   return (
+    <>
       <Head>
         <title>Blog - MFSemi LLC</title>
         <meta
