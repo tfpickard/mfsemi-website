@@ -9,14 +9,28 @@ export default function Home() {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "/path/to/chromata.min.js"; // Update with the correct path
+    script.src = "/chromata.min.js"; // Update with the correct path
     script.onload = () => {
       const img = document.createElement("img");
       img.src = "/mfsemi_logo_2.png";
       img.className = "my-image";
       canvasRef.current.appendChild(img);
 
-      const chromataInstance = new Chromata(img);
+      var defaults = {
+        colorMode: "color",
+        compositeOperation: "lighten",
+        iterationLimit: 0,
+        key: "low",
+        lineWidth: 2,
+        lineMode: "smooth",
+        origin: ["bottom"],
+        outputSize: "original",
+        pathFinderCount: 30,
+        speed: 7,
+        turningAngle: Math.PI,
+      };
+      const chromataInstance = new Chromata(img, defaults);
+
       chromataInstance.start();
     };
     document.body.appendChild(script);
