@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 
-import Layout from "../components/Layout";
-
 export default function Careers() {
   const [form, setForm] = useState({ name: "", email: "", resume: "" });
 
