@@ -129,7 +129,7 @@ export default function About() {
               </li>
               <li>
                 A catastrophic explosion in 1987, noted in state records only as
-                *"operational anomaly #638."*
+                operational anomaly #638.
               </li>
             </ul>
 
@@ -307,8 +307,8 @@ export default function About() {
             </p>
 
             <blockquote>
-              "The machine is running backward now. We must go where the mind
-              has not yet followed."
+              The machine is running backward now. We must go where the mind has
+              not yet followed.
             </blockquote>
 
             <p>
