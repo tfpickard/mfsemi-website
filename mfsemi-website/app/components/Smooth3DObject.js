@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef, useEffect } from "react";
-import p5 from "p5";
+//import p5 from "p5";
+import dynamic from "next/dynamic";
+const p5 = dynamic(() => import("p5"), { ssr: false });
 
 export default function Smooth3DObject() {
   const sketchRef = useRef();
@@ -9,11 +11,17 @@ export default function Smooth3DObject() {
     // Ensure the code only runs in the browser
     if (typeof window !== "undefined") {
       const sketch = (p) => {
-        let x = 0.1, y = 0, z = 0;
-        const a = 10, b = 28, c = 8 / 3;
+        let x = 0.1,
+          y = 0,
+          z = 0;
+        const a = 10,
+          b = 28,
+          c = 8 / 3;
         const dt = 0.01;
         let sides = 3;
-        let symmetryX = 1, symmetryY = 1, symmetryZ = 1;
+        let symmetryX = 1,
+          symmetryY = 1,
+          symmetryZ = 1;
 
         p.setup = () => {
           p.createCanvas(600, 400, p.WEBGL);
