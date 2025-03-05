@@ -3,6 +3,8 @@ import Head from "next/head";
 
 import AboutLayout from "./layout";
 
+import AboutLayout from "./layout";
+
 export default function About() {
   return (
     <>
